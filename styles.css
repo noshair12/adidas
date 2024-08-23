@@ -1,0 +1,200 @@
+/* styles.css */
+/* Full-screen video background */
+#background-video {
+    position: fixed;
+    top: 0%;
+    left: 43%;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-25%);
+    object-fit: cover;
+    z-index: -1; /* Place it behind everything else */
+    background-color: #000000cd;
+  }
+  
+  body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Consolas', 'Arial', sans-serif; /* Consolas first, Arial as a fallback */
+  }
+  
+  /* Navigation Bar Styles */
+  #navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2); /* Transparent background */
+    display: flex;
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1; /* Ensure it is above the video */
+  }
+  
+  /* Navigation Button Styles */
+  .nav-button {
+    background: none; /* Remove background color */
+    color: white;
+    border: none;
+    padding: 8px 15px; /* Adjust padding to decrease button width */
+    margin: 0 10px; /* General margin for spacing */
+    cursor: pointer;
+    font-size: 14px; /* Decrease font size if needed */
+    transition: color 0.3s ease;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Glowing effect */
+    max-width: 100px; /* Set maximum width to ensure buttons are compact */
+    text-align: center; /* Center text */
+    overflow: hidden; /* Prevent text overflow */
+    white-space: nowrap; /* Prevent text wrapping */
+    font-family: 'Consolas', 'Arial', sans-serif; /* Set font to Consolas */
+  }
+  
+  /* Specific adjustments for individual buttons */
+  #contact {
+    margin-left: auto; /* Push to the right */
+    margin-right: 10px; /* Space from the 'More' button */
+  }
+  
+  /* Adjust margins for other buttons if needed */
+  #about, #more {
+    margin-right: 10px; /* Adjust spacing as needed */
+  }
+  
+  .nav-button:hover {
+    color: #6a11cb; /* Change color on hover */
+  }
+  
+  /* Content container */
+  .content {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 50px; /* Adjust padding as needed */
+    position: relative; /* Ensure content is above video */
+  }
+  
+  /* Styles for login container */
+  .login-container {
+    background: rgba(0, 0, 0, 0.8); /* Black background with slight transparency */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 280px; /* Decrease width to fit contact us and more */
+    text-align: center;
+    color: #fff;
+    position: absolute; /* Positioning */
+    top: 50%; /* Center vertically */
+    left: 8%; /* Distance from the left edge */
+    transform: translateY(-50%); /* Center vertically */
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Glowing effect */
+  }
+  
+  /* Remove glowing effect and change font to Consolas for input fields */
+  input[type="text"], input[type="password"] {
+    width: 250px; /* Decrease width of text boxes */
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Consolas', 'Arial', sans-serif; /* Set font to Consolas */
+    outline: none;
+    transition: background 0.3s ease;
+  }
+  
+  input[type="text"]:focus, input[type="password"]:focus {
+    background: rgba(255, 255, 255, 0.3);
+    /* No text-shadow for glowing effect */
+  }
+  
+  /* Remove purple outline around the login button */
+  button {
+    margin-top: 20px;
+    width: 50%;
+    padding: 12px;
+    background: none; /* Remove background color */
+    color: white;
+    border: 1px solid #6a11cb; /* Border color for visibility */
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Consolas', 'Arial', sans-serif; /* Set font to Consolas */
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Smooth transition for background, color, and border */
+    /* Glowing effect for button text */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8),
+                 0 0 16px rgba(255, 255, 255, 0.6),
+                 0 0 24px rgba(255, 255, 255, 0.4);
+  }
+  
+  /* Add colorful background on hover */
+  button[type="submit"]:hover {
+    border-right: none;
+    border-color: transparent; /* Remove border color on hover */
+    background: linear-gradient(to right, rgb(19, 68, 75),#000000, rgb(0, 0, 0)); /* Colorful background gradient */
+    color: #ffffff; /* Ensure text color remains readable */
+  
+  }
+  .error-message {
+    color: #ff6b6b;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  /* Profile Section */
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    top: 2.5cm;
+    left: 2cm;
+  }
+  
+  .profile h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Glowing effect */
+  }
+  
+  .profile-picture {
+    width: 200px; /* Larger profile picture */
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    object-fit: cover;
+    border: 3px solid #fff;
+  }
+  
+  .profile p {
+    margin: 15px 0;
+    font-size: 24px; /* Larger text */
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+  }
+  
+  button#logout {
+    margin-top: 40px;
+    background: linear-gradient(to right, #ff512f, #dd2476);
+    padding: 15px 60px; /* Bigger logout button */
+    font-size: 20px; /* Larger font size for*/
+  }
